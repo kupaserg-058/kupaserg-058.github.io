@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Портфолио менеджера проектов и продуктов: образовательные игры, семейное приложение, телеграм-боты.">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0}
+img{max-width:100%}
+</style>
+<title>Купцов Сергей. Проекты</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    color-scheme: dark;
+    --deep:#060D18;
+    --deep-2:#0A1526;
+    --card:#080C13;
+    --card-2:#0C1119;
+    --ink:#FFFFFF;
+    --ink-2:#A7B6CA;
+    --ink-3:#6B7D94;
+    --hair:rgba(255,255,255,.08);
+    --hair-2:rgba(255,255,255,.14);
+    --glow:rgba(190,215,246,.42);
+    --accent:#9CC2F0;
+    --r:16px;
+    --f:"Golos Text","Helvetica Neue",Arial,sans-serif;
+    --fm:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  }
+
+  body{
+    font-family:var(--f);
+    font-size:16px;
+    line-height:1.6;
+    color:var(--ink-2);
+    background:var(--deep);
+    background-image:
+      radial-gradient(1100px 620px at 12% -8%, #16304F 0%, rgba(22,48,79,0) 62%),
+      radial-gradient(900px 560px at 92% 4%, #102743 0%, rgba(16,39,67,0) 58%),
+      linear-gradient(180deg, #071021 0%, #060D18 46%, #050A12 100%);
+    background-attachment:fixed;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{
+    max-width:980px;
+    margin:0 auto;
+    padding-left:20px;
+    padding-right:20px;
+    padding-block:0 72px;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    padding-block:76px 46px;
+  }
+  .masthead h1{
+    font-weight:600;
+    font-size:clamp(38px,6.4vw,62px);
+    line-height:1.02;
+    letter-spacing:-0.035em;
+    color:var(--ink);
+    margin:0 0 20px;
+    text-wrap:balance;
+  }
+  .masthead h1 span{
+    display:block;
+    font-weight:400;
+    color:var(--ink-3);
+    letter-spacing:-0.02em;
+  }
+  .contacts{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    list-style:none;
+    padding:0;
+    margin:0;
+  }
+  .contacts a, .contacts span{
+    display:inline-block;
+    font-family:var(--fm);
+    font-size:12.5px;
+    letter-spacing:-0.01em;
+    padding:8px 14px;
+    border:1px solid var(--hair);
+    border-radius:999px;
+    background:rgba(255,255,255,.028);
+    color:var(--ink-2);
+    text-decoration:none;
+    transition:border-color .16s, color .16s, background .16s;
+  }
+  .contacts a:hover{border-color:var(--hair-2);color:var(--ink);background:rgba(255,255,255,.06);}
+  .contacts a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+
+  /* ---------- case ---------- */
+  .case{padding-block:44px 0;}
+  .case:last-of-type{padding-bottom:16px;}
+  .eyebrow{
+    font-family:var(--fm);
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--ink-3);
+    margin:0 0 14px;
+  }
+  .case h2{
+    font-weight:600;
+    font-size:clamp(27px,3.9vw,38px);
+    line-height:1.1;
+    letter-spacing:-0.028em;
+    color:var(--ink);
+    margin:0 0 16px;
+    text-wrap:balance;
+  }
+  .lead{
+    font-size:18px;
+    line-height:1.55;
+    color:var(--ink-2);
+    margin:0 0 30px;
+    max-width:62ch;
+  }
+
+  h3{
+    font-family:var(--fm);
+    font-weight:500;
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:.11em;
+    color:var(--ink-3);
+    margin:38px 0 14px;
+  }
+  p{margin:0 0 14px;max-width:66ch;}
+  .case ul{margin:0 0 14px;padding-left:0;list-style:none;max-width:68ch;}
+  .case ul li{position:relative;padding-left:19px;margin-bottom:10px;}
+  .case ul li::before{
+    content:"";
+    position:absolute;
+    left:1px;top:11px;
+    width:5px;height:5px;
+    border-radius:50%;
+    background:var(--accent);
+    opacity:.6;
+  }
+  strong{font-weight:600;color:var(--ink);}
+
+  /* ---------- glow card ---------- */
+  .glow{
+    position:relative;
+    border-radius:var(--r);
+    background:linear-gradient(168deg, var(--card-2) 0%, var(--card) 62%);
+    overflow:hidden;
+  }
+  .glow::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:inherit;
+    padding:1px;
+    background:linear-gradient(150deg, var(--glow) 0%, rgba(190,215,246,.05) 28%, rgba(255,255,255,.03) 70%, rgba(190,215,246,.22) 100%);
+    -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+    mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite:exclude;
+    pointer-events:none;
+  }
+
+  /* ---------- metrics ---------- */
+  .metrics{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(178px,1fr));
+    gap:12px;
+    margin:30px 0 4px;
+  }
+  .metric{padding:22px 20px 20px;}
+  .metric b{
+    display:block;
+    font-weight:400;
+    font-size:clamp(28px,3.6vw,38px);
+    line-height:1.04;
+    letter-spacing:-0.035em;
+    color:var(--ink);
+    font-variant-numeric:tabular-nums;
+    margin-bottom:10px;
+  }
+  .metric span{
+    display:block;
+    font-size:13px;
+    line-height:1.42;
+    color:var(--ink-3);
+  }
+
+  /* ---------- media ---------- */
+  figure{margin:28px 0;}
+  figure video, figure img{
+    display:block;
+    width:100%;
+    max-width:100%;
+    height:auto;
+    border-radius:var(--r);
+    border:1px solid var(--hair);
+    background:#05090F;
+  }
+  figcaption{
+    font-size:13px;
+    line-height:1.5;
+    color:var(--ink-3);
+    margin-top:11px;
+    max-width:60ch;
+  }
+  .shots{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+    gap:12px;
+    margin:28px 0 11px;
+  }
+  .shots img{margin:0;}
+
+  .placeholder{
+    padding:34px 24px;
+    text-align:center;
+    margin:28px 0;
+  }
+  .placeholder p{
+    margin:0 auto;
+    max-width:44ch;
+    font-family:var(--fm);
+    font-size:12.5px;
+    line-height:1.7;
+    color:var(--ink-3);
+  }
+
+  /* ---------- files ---------- */
+  .files{
+    margin:30px 0 0;
+    padding:0;
+    list-style:none;
+    overflow:hidden;
+  }
+  .files li{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:6px 12px;
+    padding:14px 18px;
+    margin:0;
+    position:relative;
+    z-index:1;
+  }
+  .files li + li{border-top:1px solid rgba(255,255,255,.055);}
+  .files .kind{
+    font-family:var(--fm);
+    font-size:10.5px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--accent);
+    border:1px solid rgba(156,194,240,.26);
+    padding:3px 8px;
+    border-radius:5px;
+    flex:none;
+  }
+  .files a{
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid rgba(156,194,240,.4);
+    transition:border-color .15s;
+  }
+  .files a:hover{border-bottom-color:var(--accent);}
+  .files a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+  .files .todo{color:var(--ink-2);border-bottom:1px dashed rgba(255,255,255,.2);}
+  .files .note{font-size:12.5px;color:var(--ink-3);margin-left:auto;}
+
+  /* ---------- footer ---------- */
+  .foot{
+    margin-top:56px;
+    padding-block:34px 0;
+    border-top:1px solid var(--hair);
+  }
+  .foot p{font-size:14.5px;color:var(--ink-3);max-width:60ch;}
+  .foot a{color:var(--accent);text-decoration:none;}
+  .foot a:hover{text-decoration:underline;}
+
+  @media (max-width:520px){
+    .masthead{padding-block:46px 32px;}
+    .case{padding-block:34px 0;}
+    .files .note{margin-left:0;width:100%;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap" lang="ru">
+
+  <header class="masthead">
+    <h1>Купцов Сергей<span>Проекты</span></h1>
+    <ul class="contacts">
+      <li><a href="tel:+79869398733">+7 986 939-87-33</a></li>
+      <li><a href="mailto:kuptsovsergey058@gmail.com">kuptsovsergey058@gmail.com</a></li>
+      <li><a href="https://t.me/cerezhka058">@cerezhka058</a></li>
+      <li><span>Москва</span></li>
+    </ul>
+  </header>
+
+  <main>
+
+    <!-- ========== CASE 1 ========== -->
+    <article class="case">
+      <p class="eyebrow">Руководитель проекта · ДПОИ Президентской академии · сентябрь 2024 — июль 2026</p>
+      <h2>«Просвет. Игры»</h2>
+      <p class="lead">Образовательные визуальные новеллы для студентов магистратуры программы «РЕСУРС России» и участников программы профессиональной переподготовки по проектному управлению. Задания курса встроены в сюжет: слушатель проходит эпизод и по ходу принимает решения из своей будущей работы.</p>
+
+      <figure>
+        <video controls preload="metadata" poster="media/poster.jpg">
+          <source src="media/teaser.mp4" type="video/mp4">
+          Тизер игры (видео не поддерживается вашим браузером).
+        </video>
+        <figcaption>Тизер первого эпизода.</figcaption>
+      </figure>
+
+      <div class="metrics">
+        <div class="metric glow"><b>3 дня → 30 мин</b><span>на единицу контента: персонаж, фон, трек</span></div>
+        <div class="metric glow"><b>5 000 ₽ → 0</b><span>стоимость той же единицы</span></div>
+        <div class="metric glow"><b>+20%</b><span>вовлечённость и усвоение материала</span></div>
+        <div class="metric glow"><b>100+</b><span>человек прошли 2 игры и 44 ролика</span></div>
+      </div>
+
+      <h3>Как устроено производство</h3>
+      <p>Весь визуал и звук команда делала сама, без закупки ассетов на стороне. Пайплайн под движок Ren'Py собирался так:</p>
+      <ul>
+        <li><strong>Персонажи и фоны</strong> генерировались в Midjourney по единому описанию стиля, чтобы эпизоды выглядели как один продукт, а не набор картинок.</li>
+        <li><strong>Саундтреки</strong> собирались в AIVA под настроение сцены: храм, пустыня, диалог, развязка.</li>
+        <li><strong>Сборка эпизода</strong> шла в Ren'Py: ветвление диалогов, задания по проектному управлению, сохранения, интерфейс.</li>
+      </ul>
+      <p>Каждый ассет проходил приёмку: стиль, соответствие сцене, читаемость на фоне диалогового окна. Отбраковка закладывалась в сроки как обычный этап, а не как авария.</p>
+
+      <div class="shots">
+        <figure><img src="media/game-2.jpg" alt="Кадр из игры: диалог персонажей на фоне пирамид"></figure>
+        <figure><img src="media/game-3.jpg" alt="Кадр из игры: интерьер гробницы, игровая локация"></figure>
+      </div>
+      <p style="font-size:13px;color:var(--ink-3);max-width:60ch;">Персонажи и локации первого эпизода.</p>
+
+      <h3>Документация проекта</h3>
+      <p>Проект вёлся по полному комплекту: паспорт проекта и план управления, в котором план-график с контрольными точками и подтверждающими документами по каждому результату, матрица рисков с вероятностью, уровнем воздействия и рангом, план управления возможностями, план работы с пятью группами заинтересованных сторон, план коммуникаций и матрица распределения ответственности.</p>
+      <p>Оценка эффективности обучения заложена по модели Киркпатрика, показатели снимались анкетированием слушателей и преподавателей до и после внедрения.</p>
+
+      <ul class="files glow">
+        <li><span class="kind">PDF</span><a href="https://disk.yandex.ru/i/-iagTvJzTy7lGg" target="_blank" rel="noopener">Презентация проекта</a></li>
+        <li><span class="kind">DOC</span><a href="https://disk.yandex.ru/i/48NirOpVZCuRTg" target="_blank" rel="noopener">Паспорт проекта</a></li>
+        <li><span class="kind">DOC</span><a href="https://disk.yandex.ru/i/ihZ8aCXUfMDJcw" target="_blank" rel="noopener">План управления проектом</a></li>
+      </ul>
+    </article>
+
+    <!-- ========== CASE 2 ========== -->
+    <article class="case">
+      <p class="eyebrow">Менеджер продукта · ZNAI Tech · март 2026 — сейчас</p>
+      <h2>Семейное приложение</h2>
+      <p class="lead">Мобильное приложение, в котором семья каждый день фиксирует радости и вместе отбирает лучшие моменты недели и месяца. Отвечаю за продукт целиком, кроме разработки.</p>
+
+      <h3>Задача</h3>
+      <p>Заказчик с большой семьёй хотел инструмент для общего вечернего ритуала. Существующие приложения закрывают либо быт семьи, либо личную рефлексию одного человека. Нужно было проверить, есть ли ниша на стыке, и если есть, определить, каким должен быть продукт.</p>
+
+      <h3>Что я делал</h3>
+      <ul>
+        <li><strong>Анализ рынка.</strong> Разобрал 11 продуктов: семейные органайзеры, трекеры привычек, дневники рефлексии. Сравнивал по целевой аудитории, ключевым функциям, UX, монетизации и охвату, каждый оценивал отдельно по двум осям: совместность и ежедневная рефлексия.</li>
+        <li><strong>Концепция продукта.</strong> Проблема, ценность отдельно для родителя и для ребёнка, продуктовые принципы, риски, границы MVP и список отложенных функций.</li>
+        <li><strong>Требования.</strong> Фич-лист MVP на 35 пунктов с описанием экранов, ограничениями и оценкой трудозатрат по фронтенду и бэкенду, разделённый на мобильное приложение и веб-админку.</li>
+        <li><strong>Интерфейс.</strong> Более 20 экранов в Figma и полный пользовательский путь от регистрации до выбора радости недели. Прототип дорабатывал по итогам показов заказчику.</li>
+        <li><strong>Метрики и гипотезы.</strong> Заложил систему для замера на запуске: удержание D1, D7, D30, конверсия онбординга в первую запись, доля семей с двумя и более активными участниками, частота записей, отток.</li>
+      </ul>
+
+      <h3>Как это выглядит в работе</h3>
+      <p>Продукт в разработке, поэтому материалы ниже показаны общим планом: детали намеренно не читаются. Задача этих двух кадров не в том, чтобы разобрать конкретные решения, а в том, чтобы показать формат и объём работы.</p>
+
+      <figure>
+        <img src="media/competitors.png" alt="Таблица анализа конкурентов: по каждому приложению страна, аудитория, функции, UX, монетизация, оценки и скриншоты интерфейса">
+        <figcaption>Разбор рынка. По каждому продукту фиксировались страна, аудитория, ключевые функции, UX, монетизация и охват, затем шли четыре субъективные оценки по десятибалльной шкале, колонка «что можно забрать» и свободный комментарий. Справа скриншоты интерфейсов.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="media/figma-flow.png" alt="Рабочая доска в Figma: экраны приложения и связи между ними">
+        <figcaption>Рабочая доска в Figma: экраны MVP и переходы между ними, от онбординга и создания семьи до истории радостей и отбора лучших моментов недели и месяца.</figcaption>
+      </figure>
+
+      <h3>Статус</h3>
+      <p>Тестируем на узкой выборке. Параллельно пересобираем концепт и продолжаем изучать рынок: механик, которые закрывают отдельные куски нашего сценария, там оказалось больше, чем предполагалось на старте, поэтому сейчас решаем, какими функциями продукт будет отличаться.</p>
+    </article>
+
+    <!-- ========== CASE 3 ========== -->
+    <article class="case">
+      <p class="eyebrow">Личные проекты · 2025—2026</p>
+      <h2>Два телеграм-бота на LLM API</h2>
+      <p class="lead">Написал на Python для собственных задач, пользуюсь ежедневно. Оба доведены до рабочего состояния.</p>
+
+      <h3>Генератор колод Anki</h3>
+      <p>По текстовому запросу собирает колоду карточек для интервального повторения и отдаёт готовым файлом. Закрывает самую долгую часть подготовки к экзаменам: раскладывание материала на вопрос и ответ.</p>
+
+      <h3>Новостная сводка</h3>
+      <p>Ежедневно присылает подборку новостей по заданным темам: собирает источники, отбирает существенное и пишет короткие выжимки.</p>
+
+      <ul class="files glow">
+        <li><span class="kind">GITHUB</span><a href="https://github.com/kupaserg-058/ankiserghelper" target="_blank" rel="noopener">ankiserghelper</a><span class="note">генератор колод Anki</span></li>
+        <li><span class="kind">GITHUB</span><a href="https://github.com/kupaserg-058/tg-news-bot" target="_blank" rel="noopener">tg-news-bot</a><span class="note">новостная сводка</span></li>
+      </ul>
+    </article>
+
+  </main>
+
+  <footer class="foot">
+    <p>Связаться: <a href="tel:+79869398733">+7 986 939-87-33</a>, <a href="mailto:kuptsovsergey058@gmail.com">kuptsovsergey058@gmail.com</a>, <a href="https://t.me/cerezhka058">@cerezhka058</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
